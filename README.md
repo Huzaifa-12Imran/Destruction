@@ -2,8 +2,6 @@
 
 A fully physics-simulated, open-world car driving experience built in a single HTML file using **Three.js** and **Rapier3D**.
 
-![Snowfield](media/screenshot.png) *(Add a screenshot here if you have one)*
-
 ## 🚀 Features
 
 *   **Procedural Open World:** Infinite terrain generated using multi-octave Perlin noise, featuring different biomes (snow, sand, dirt) and water.
