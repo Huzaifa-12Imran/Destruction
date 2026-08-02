@@ -1314,10 +1314,10 @@ terrF.addSlider('Amplitude', terrainSettings, 'amplitude', 0, 15, 0.5, rebuildAl
 
 const shadowColorSettings = {
   shadowColor: '#000000',
-  shadowAmbient: '#' + redAmbient.color.getHexString(),  
+  shadowAmbient: '#' + fillLight.color.getHexString(),  
   shadowHemiSky: '#' + shadowRedFill.color.getHexString(),
   shadowHemiGround: '#' + shadowRedFill.groundColor.getHexString(),
-  shadowAmbientIntensity: redAmbient.intensity,
+  shadowAmbientIntensity: fillLight.intensity,
   shadowHemiIntensity: shadowRedFill.intensity,
 }
 
@@ -1332,10 +1332,10 @@ lightF.addSelect('Shadow Res', shadowSettings, 'resolution',
   (v) => { dirLight.shadow.mapSize.set(v, v); if (dirLight.shadow.map) { dirLight.shadow.map.dispose(); dirLight.shadow.map = null } })
 
 lightF.addColor('Shadow Ambient', shadowColorSettings, 'shadowAmbient', (v) => {
-  redAmbient.color.set(v)
+  fillLight.color.set(v)
 })
 lightF.addSlider('Ambient Intensity', shadowColorSettings, 'shadowAmbientIntensity', 0, 2, 0.05, (v) => {
-  redAmbient.intensity = v
+  fillLight.intensity = v
 })
 lightF.addColor('Hemi Sky', shadowColorSettings, 'shadowHemiSky', (v) => {
   shadowRedFill.color.set(v)
